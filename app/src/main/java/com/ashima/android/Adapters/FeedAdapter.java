@@ -42,7 +42,7 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder> {
         holder.tvTitle.setText(rowDataFeed.getTitle());
         holder.tvDesc.setText(rowDataFeed.getDescription());
         String imageURL = rowDataFeed.getImageHref();
-        if (imageURL != null)
+        if (imageURL != null&&imageURL.length()>0)
             Glide.with(mContext).load(imageURL).into(holder.ivThumbnail);
     }
 
